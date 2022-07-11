@@ -35,13 +35,11 @@ async function request(url) {
 
 (async () => {
   console.log("Fetching page...");
-  const response = await fetch(url);
-  const page = await response.text();
+  const page = await request(url);
   const embedURL = parse(page).querySelector("iframe").getAttribute("src");
 
   console.log("Fetching embed...");
-  const embedResponse = await fetch(embedURL);
-  const embedPage = await embedResponse.text();
+  const embedPage = await request(embedURL);
   const dat = parse(embedPage)
     .querySelector("script")
     .innerText.match(/'(.*)'/)[1];
