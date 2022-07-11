@@ -1,0 +1,17 @@
+{
+  "name": "sprout-video-downloader-minimal",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "m3u8-parser": "^4.7.1",
+    "node-fetch": "^3.2.6",
+    "node-html-parser": "^5.3.3"
+  }
+}
